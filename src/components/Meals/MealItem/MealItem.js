@@ -4,6 +4,7 @@ import MealItemForm from './MealItemForm'
 
 const MealItem = (props) => {
 const price =`$${props.price.toFixed(2)}`
+const addToCartHandler = amount => {};
 
 return (
 <li className={classes.meal}>
@@ -13,7 +14,7 @@ return (
     <div className={classes.price}>{price}</div>
 </div>
 <div>
-    <MealItemForm id={props.id}/>
+    <MealItemForm onAddToCart={addToCartHandler}/>
     </div>
 </li>
 )
